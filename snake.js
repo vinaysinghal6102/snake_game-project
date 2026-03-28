@@ -12,8 +12,8 @@ const timeElement=document.querySelector("#time");
 
 
 
-const blockheight=50;
-const blockwidth=50;
+const blockheight=30;
+const blockwidth=30;
 
 let highScore=localStorage.getItem("highScore")||0;
 let score=0
