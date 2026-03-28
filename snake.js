@@ -46,7 +46,7 @@ for(let col=0;col<cols;col++){
  const block=document.createElement('div');
     block.classList.add("block");
     board.appendChild(block)
-    block.innerText=`${row}-${col}`
+    
     blocks[`${row}-${col}`]=block
 }
 }
