@@ -184,9 +184,10 @@ let touchStartX = 0;
 let touchStartY = 0;
 
 document.addEventListener("touchstart", function(e) {
+    e.preventDefault();
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
-});
+},{passive:false});
 
 document.addEventListener("touchend", function(e) {
     let touchEndX = e.changedTouches[0].clientX;
