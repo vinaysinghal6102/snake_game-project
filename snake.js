@@ -184,10 +184,10 @@ let touchStartX = 0;
 let touchStartY = 0;
 
 document.addEventListener("touchstart", function(e) {
-    e.preventDefault();
+    
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
-},{passive:false});
+},{passive:true});
 
 document.addEventListener("touchend", function(e) {
     let touchEndX = e.changedTouches[0].clientX;
@@ -195,6 +195,11 @@ document.addEventListener("touchend", function(e) {
 
     let dx = touchEndX - touchStartX;
     let dy = touchEndY - touchStartY;
+
+     if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+        e.preventDefault();
+    }
+
 
     if (Math.abs(dx) > Math.abs(dy)) {
         if (dx > 0 && direction !== "left") {
@@ -209,4 +214,4 @@ document.addEventListener("touchend", function(e) {
             direction = "up";
         }
     }
-});
+},{passive:false});
