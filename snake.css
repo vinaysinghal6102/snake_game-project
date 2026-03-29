@@ -89,7 +89,7 @@ section .infos{
 }
 
 .board{
-    border: 5px solid white var(--border-primary-color);
+    border: 5px solid white;
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(30px,1fr));
