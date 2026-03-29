@@ -89,7 +89,7 @@ section .infos{
 }
 
 .board{
-    border: 1px solid var(--border-primary-color);
+    border: 5px solid var(--border-primary-color);
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(30px,1fr));
@@ -100,7 +100,7 @@ section .infos{
 .block{
     /* width: 30px;
     height: 30px; */
-    border: 1px solid var(--border-primary-color);
+    
     border-radius:50%;
 }
 
